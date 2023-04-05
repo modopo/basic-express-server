@@ -17,6 +17,9 @@ app.get('/person', validator, (request, response, next) => {
 });
 
 
+app.use("*", error404);
+app.use(error500);
+
 
 module.exports = {
   app,
